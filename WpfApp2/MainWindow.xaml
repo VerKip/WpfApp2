@@ -11,34 +11,29 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Background="#FFD9EAEA" BorderBrush="Gray" BorderThickness="3 3 1 1" Margin="3 0 3 3" MinHeight="70">
-            <TextBlock Text="1 234,78" FontFamily="Arial" FontSize="30" TextAlignment="Right" VerticalAlignment="Bottom"/>
-        </Border>
-        <UniformGrid Rows="6" Columns="4" Grid.Row="1">
-            <Button Content="%" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="CE" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="C" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="⇐" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="1/x" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="x²" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="√x" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="÷" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="7" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="8" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="9" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="X" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="4" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="5" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="6" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="-" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="1" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="2" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="3" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="+" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
-            <Button Content="+/-" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="0" BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="," BorderBrush="#FF464545" BorderThickness="1"/>
-            <Button Content="=" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE"/>
+        <TextBox x:Name="b_display" Grid.Row="0" Text="0" Background="#FFD9EAEA" FontFamily="Arial" FontSize="30" TextAlignment="Right" VerticalAlignment="Bottom"
+                     BorderBrush="Gray" BorderThickness="3 3 1 1" Margin="3 0 3 3" MinHeight="70" IsReadOnly="True"/>
+        <UniformGrid Rows="5" Columns="4" Grid.Row="1">
+            <Button x:Name="b_back" Content="&lt;=" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_back_Click"/>
+            <Button x:Name="b_sqrt" Content="√" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_sqrt_Click"/>
+            <Button x:Name="b_clear" Content="C" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_clear_Click"/>
+            <Button x:Name="b_divide" Content="÷" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_divide_Click"/>
+            <Button x:Name="b_seven" Content="7" BorderBrush="#FF464545" BorderThickness="1" Click="b_seven_Click"/>
+            <Button x:Name="b_eight" Content="8" BorderBrush="#FF464545" BorderThickness="1" Click="b_eight_Click"/>
+            <Button x:Name="b_nine" Content="9" BorderBrush="#FF464545" BorderThickness="1" Click="b_nine_Click"/>
+            <Button x:Name="b_times" Content="X" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_times_Click"/>
+            <Button x:Name="b_four" Content="4" BorderBrush="#FF464545" BorderThickness="1" Click="b_four_Click"/>
+            <Button x:Name="b_five" Content="5" BorderBrush="#FF464545" BorderThickness="1" Click="b_five_Click"/>
+            <Button x:Name="b_six" Content="6" BorderBrush="#FF464545" BorderThickness="1" Click="b_six_Click"/>
+            <Button x:Name="b_minus" Content="-" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_minus_Click"/>
+            <Button x:Name="b_one" Content="1" BorderBrush="#FF464545" BorderThickness="1" Click="b_one_Click_1"/>
+            <Button x:Name="b_two" Content="2" BorderBrush="#FF464545" BorderThickness="1" Click="b_two_Click"/>
+            <Button x:Name="b_three" Content="3" BorderBrush="#FF464545" BorderThickness="1" Click="b_three_Click"/>
+            <Button x:Name="b_plus" Content="+" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_plus_Click"/>
+            <Button x:Name="b_plusminus" Content="+/-" BorderBrush="#FF464545" BorderThickness="1" Click="b_plusminus_Click"/>
+            <Button x:Name="b_zero" Content="0" BorderBrush="#FF464545" BorderThickness="1" Click="b_zero_Click"/>
+            <Button Content="" BorderBrush="#FF464545" BorderThickness="1"/>
+            <Button x:Name="b_equals" Content="=" BorderBrush="#FF464545" BorderThickness="1" Background="#FFAEAEAE" Click="b_equals_Click"/>
         </UniformGrid>
     </Grid>
 </Window>
